@@ -1,7 +1,9 @@
-resource "aws_instance" "example" {
-ami = "ami-06ad6c264ce8dab0d"
-instance_type = "t2.micro"
-tags = {
-    Name="example"
+terraform {
+   required_version = ">= 0.12.24"
+   backend "s3" {
+     bucket = "terraformbackenttf"
+     key    = "terraformbackend.tfstate"
+     region = "us-east-2"
 }
 }
+
