@@ -31,8 +31,8 @@ jobs:
       run: terraform init
 
     # Checks that all Terraform configuration files adhere to a canonical format
-    - name: Terraform Format
-      run: echo "Hello World"
+    - name: Terraform validation
+      run: terraform validation
 
   
 
